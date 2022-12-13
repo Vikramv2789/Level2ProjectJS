@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Page</title>
+    <script>
+        function shower(){
+            document.getElementById("table").style.visibility = "visible";
+        }
+        function hideTable(){
+            document.getElementById("table").style.visibility = "hidden";
+        }
+    </script>
+    <style>
+        body{
+            background-color: gray;
+        }
+        h1{
+            text-decoration: underline;
+            font: bold Arial;
+            background-color: yellow;
+            color: white;
+        }
+        #info{
+            background-color: blue;
+        }
+        #coverImage{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #navbar{
+            display: flex;
+            flex-direction: column;
+            background-color: coral;
+        }
+        h2{
+            color: lightblue;
+        }
+        table, th, td{
+            border: 1px solid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #artInfo{
+            display: flex;
+            flex-direction: column;
+        }
+        #art, #artInfo{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body onload="hideTable();">
+    <h1>Welcome</h1>
+    <div id="info">
+        The Convention is coming to town.
+    </div>
+    <img id="coverImage" src="images/convention1.jpg" alt="">
+    <div id="navbar">
+        <a href="guest.html">Here is the Guest List</a>
+        <a href="events.html">Here is the Events List</a>
+    </div>
+    <h2>Convention</h2>
+    <div>
+        The convention is a place for people to gather and find common ground and basically have fun. There will be free food and a lot of party music so heads up
+    </div>
+    <br></br>
+    <div id="artInfo">
+        Press the button to show a list of artists
+        <button id="art" onclick="shower();">Show the Artists</button>
+    </div>
+    <table id="table">
+        <tr>
+            <th>Artists</th>
+            <th>Songs</th>
+        </tr>
+        <tr>
+            <th>Michael Jackson</th>
+            <th>Thriller</th>
+        </tr>
+        <tr>
+            <th>Phil Collins</th>
+            <th>Take me home</th>
+        </tr>
+        <tr>
+            <th>Elton John</th>
+            <th>Philadelphia Freedom</th>
+        </tr>
+        <tr>
+            <th>George Micheal</th>
+            <th>Last Christmas</th>
+        </tr>
+    </table>
+</body>
+</html>
